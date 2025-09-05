@@ -2,9 +2,9 @@ const fs = require('fs');
 const path = require('path');
 
 const baseConfig = {
-    port: process.env.PORT || 10000,
+    port: process.env.PORT || 80,
     defaultUserAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
-    defaultLanguage: 'Italiana',
+    defaultLanguage: 'ENGLISH',
     cacheSettings: {
         updateInterval: 2 * 60 * 60 * 1000,
         maxAge: 12 * 60 * 60 * 1000,
@@ -17,10 +17,10 @@ const baseConfig = {
         cacheExpiry: 12 * 60 * 60 * 1000
     },
     manifest: {
-        id: 'org.mccoy88f.omgtv',
+        id: 'org.mccoy88f.hytv',
         version: '1.0.0',
-        name: 'OMG TV',
-        description: 'Modalita provvisoria, installazione con errori, attivo mod. provvisoria',
+        name: 'HY TV',
+        description: 'Live World Sports and PPV Streams',
         logo: 'https://github.com/mccoy88f/OMG-TV-Stremio-Addon/blob/main/tv.png?raw=true',
         resources: ['stream', 'catalog', 'meta'],
         types: ['tv'],
@@ -28,8 +28,8 @@ const baseConfig = {
         catalogs: [
             {
                 type: 'tv',
-                id: 'omg_tv',
-                name: 'OMG TV',
+                id: 'hy_tv',
+                name: 'HY TV',
                 extra: [
                     {
                         name: 'genre',
