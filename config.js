@@ -21,7 +21,7 @@ const baseConfig = {
         version: '1.0.0',
         name: 'HY TV',
         description: 'Live World Sports and PPV Streams',
-        logo: 'https://github.com/mccoy88f/OMG-TV-Stremio-Addon/blob/main/tv.png?raw=true',
+        logo: 'https://raw.githubusercontent.com/charles-bukow/HY-TV/refs/heads/main/tv.png',
         resources: ['stream', 'catalog', 'meta'],
         types: ['tv'],
         idPrefixes: ['tv'],
