@@ -564,7 +564,7 @@ async function startAddon() {
    cleanupTempFolder();
 
    try {
-       const port = process.env.PORT || 10000;
+       const port = process.env.PORT || 80;
        app.listen(port, () => {
           console.log('=============================\n');
           console.log('OMG ADDON Avviato con successo');
