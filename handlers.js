@@ -31,12 +31,12 @@ function cleanNameForImage(name) {
         cleaned = parts[0].trim();
     }
     
-    // Se ancora troppo lungo, tronchiamo preservando parole intere
-    if (cleaned.length > 30) {
+    // SHORTENED: Max 20 chars for better readability
+    if (cleaned.length > 20) {
         let words = cleaned.split(' ');
         let result = '';
         for (let word of words) {
-            if ((result + ' ' + word).length <= 27) {
+            if ((result + ' ' + word).length <= 17) {
                 result += (result ? ' ' : '') + word;
             } else {
                 break;
@@ -45,7 +45,7 @@ function cleanNameForImage(name) {
         cleaned = result + '...';
     }
     
-    return cleaned || 'No Name';
+    return cleaned || 'Channel';
 }
 
 async function catalogHandler({ type, id, extra, config: userConfig }) {
@@ -103,8 +103,8 @@ async function catalogHandler({ type, id, extra, config: userConfig }) {
         const metas = paginatedChannels.map(channel => {
             const displayName = cleanNameForImage(channel.name);
             const encodedName = encodeURIComponent(displayName).replace(/%20/g, '+');
-            // FIXED: Professional black background with white text
-            const fallbackLogo = `https://dummyimage.com/500x500/000000/ffffff.png?text=${encodedName}`;
+            // FIXED: Better service with bigger, bolder text (font size 40, bold)
+            const fallbackLogo = `https://placehold.co/500x500/000000/ffffff/png?text=${encodedName}&font=roboto`;
             const language = getLanguageFromConfig(userConfig);
             const languageAbbr = language.substring(0, 3).toUpperCase();
             
@@ -354,8 +354,8 @@ async function streamHandler({ id, config: userConfig }) {
         // Aggiungi i metadati a tutti gli stream
         const displayName = cleanNameForImage(channel.name);
         const encodedName = encodeURIComponent(displayName).replace(/%20/g, '+');
-        // FIXED: Professional black background with white text
-        const fallbackLogo = `https://dummyimage.com/500x500/000000/ffffff.png?text=${encodedName}`;
+        // FIXED: Better service with bigger, bolder text
+        const fallbackLogo = `https://placehold.co/500x500/000000/ffffff/png?text=${encodedName}&font=roboto`;
 
         const meta = {
             id: channel.id,
