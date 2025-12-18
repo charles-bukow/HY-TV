@@ -103,7 +103,8 @@ async function catalogHandler({ type, id, extra, config: userConfig }) {
         const metas = paginatedChannels.map(channel => {
             const displayName = cleanNameForImage(channel.name);
             const encodedName = encodeURIComponent(displayName).replace(/%20/g, '+');
-            const fallbackLogo = `https://dummyimage.com/500x500/590b8a/ffffff.jpg&text=${encodedName}`;
+            // FIXED: Professional black background with white text
+            const fallbackLogo = `https://dummyimage.com/500x500/000000/ffffff.png?text=${encodedName}`;
             const language = getLanguageFromConfig(userConfig);
             const languageAbbr = language.substring(0, 3).toUpperCase();
             
@@ -353,7 +354,8 @@ async function streamHandler({ id, config: userConfig }) {
         // Aggiungi i metadati a tutti gli stream
         const displayName = cleanNameForImage(channel.name);
         const encodedName = encodeURIComponent(displayName).replace(/%20/g, '+');
-        const fallbackLogo = `https://dummyimage.com/500x500/590b8a/ffffff.jpg&text=${encodedName}`;
+        // FIXED: Professional black background with white text
+        const fallbackLogo = `https://dummyimage.com/500x500/000000/ffffff.png?text=${encodedName}`;
 
         const meta = {
             id: channel.id,
