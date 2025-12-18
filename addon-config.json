@@ -1,7 +1,7 @@
 {
-    "addonName": "OMG Premium TV",
+    "addonName": "HY TV",
     "addonId": "org.mccoy88f.omgpremiumtv",
-    "addonDescription": "Addon per Stremio che ti permette di guardare i tuoi canali TV e IPTV preferiti da playlist M3U/M3U8, arricchiti con informazioni sui programmi (EPG)",
+    "addonDescription": "Stremio IPTV With (EPG)",
     "addonVersion": "6.0.0",
     "addonLogo": "https://raw.githubusercontent.com/charles-bukow/HY-TV/refs/heads/main/tv.png",
     "defaultLanguage": "English"
