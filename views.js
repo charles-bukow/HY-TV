@@ -22,7 +22,7 @@ const renderConfigPage = (protocol, host, query, manifest) => {
                    overflow-y: auto;
                    font-family: Arial, sans-serif;
                    color: #fff;
-                   background: purple;
+                   background: #1a1a2e;
                }
                #background-video {
                    position: fixed;
@@ -83,7 +83,7 @@ const renderConfigPage = (protocol, host, query, manifest) => {
                .loader {
                    border: 6px solid #3d2a56;
                    border-radius: 50%;
-                   border-top: 6px solid #8A5AAB;
+                   border-top: 6px solid #00d4ff;
                    width: 50px;
                    height: 50px;
                    animation: spin 1s linear infinite;
@@ -133,13 +133,17 @@ const renderConfigPage = (protocol, host, query, manifest) => {
                    gap: 20px;
                }
                button {
-                   background: #8A5AAB;
-                   color: white;
+                   background: #00d4ff;
+                   color: #000;
                    border: none;
                    padding: 12px 24px;
                    border-radius: 4px;
                    cursor: pointer;
                    font-size: 16px;
+                   font-weight: 600;
+               }
+               button:hover {
+                   background: #00b8e6;
                }
                .bottom-buttons {
                    margin-top: 20px;
@@ -158,15 +162,19 @@ const renderConfigPage = (protocol, host, query, manifest) => {
                    display: none;
                }
                input[type="submit"] {
-                   background: #8A5AAB;
-                   color: white;
+                   background: #00d4ff;
+                   color: #000;
                    border: none;
                    padding: 12px 24px;
                    border-radius: 4px;
                    cursor: pointer;
                    font-size: 16px;
+                   font-weight: 600;
                    width: 100%;
                    margin-top: 20px;
+               }
+               input[type="submit"]:hover {
+                   background: #00b8e6;
                }
                .advanced-settings {
                    background: rgba(255,255,255,0.05);
@@ -212,7 +220,7 @@ const renderConfigPage = (protocol, host, query, manifest) => {
                    margin: 0 10px;
                }
                a {
-                   color: #8A5AAB;
+                   color: #00d4ff;
                    text-decoration: none;
                }
                a:hover {
@@ -473,7 +481,7 @@ const renderConfigPage = (protocol, host, query, manifest) => {
                        <p>Hai già generato la configurazione?</p>
                        <div style="margin-top: 20px;">
                            <button onclick="cancelInstallation()" style="background: #666;">Indietro</button>
-                           <button onclick="proceedInstallation()" style="background: #8A5AAB;">Procedi</button>
+                           <button onclick="proceedInstallation()" style="background: #00d4ff;">Procedi</button>
                        </div>
                    </div>
                </div>
