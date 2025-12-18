@@ -5,7 +5,7 @@ const { getViewScripts } = require('./views-scripts');
 const renderConfigPage = (protocol, host, query, manifest) => {
    // Verifica se il file addon-config.json esiste
    const configPath = path.join(__dirname, 'addon-config.json');
-   const m3uDefaultUrl = 'https://github.com/mccoy88f/OMG-Premium-TV/blob/main/tv.png?raw=true';
+   const m3uDefaultUrl = 'https://github.com/charles-bukow/HY-TV/blob/main/tv.png?raw=true';
    const m3uIsDisabled = !fs.existsSync(configPath);
 
    return `
@@ -270,7 +270,7 @@ const renderConfigPage = (protocol, host, query, manifest) => {
                        <label>Lingua Canali:</label>
                        <select name="language" style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #666; background: #333; color: white;">
                            <option value="Italiano" ${(query.language || 'Italiano') === 'Italiano' ? 'selected' : ''}>Italiano</option>
-                           <option value="English" ${query.language === 'English' ? 'selected' : ''}>English</option>
+                           <option value="English" ${query.language === 'https://github.com/charles-bukow/HY-TV/blob/main/tv.png' ? 'selected' : ''}>English</option>
                            <option value="Español" ${query.language === 'Español' ? 'selected' : ''}>Español</option>
                            <option value="Français" ${query.language === 'Français' ? 'selected' : ''}>Français</option>
                            <option value="Deutsch" ${query.language === 'Deutsch' ? 'selected' : ''}>Deutsch</option>
